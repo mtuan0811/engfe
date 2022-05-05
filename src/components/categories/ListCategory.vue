@@ -48,11 +48,18 @@
               </v-col>
               <v-col cols="12" sm="6" md="4">
                 <v-img
-                  lazy-src="https://picsum.photos/id/11/10/6"
-                  max-height="60"
-                  max-width="100"
-                  :src="item.images"
+                  max-height="100"
+                  max-width="200"
+                  :src="url ? url : editedItem.images"
                 ></v-img>
+                <v-file-input
+                  v-model="file"
+                  @change="onFileChange"
+                  accept="image/png, image/jpeg, image/bmp"
+                  placeholder="Pick an avatar"
+                  prepend-icon="mdi-camera"
+                  label="Avatar"
+                ></v-file-input>
               </v-col>
             </v-row>
           </v-container>
@@ -81,15 +88,29 @@ export default {
     },
     closeSave() {
       this.dialog = false;
+      this.file = null;
+      this.url = null;
     },
     deleteItem(item) {
       this.editedIndex = this.categories.indexOf(item);
       this.categories.splice(this.editedIndex, 1);
     },
+    onFileChange(image) {
+      if (image) {
+        this.file = image;
+        this.url = URL.createObjectURL(this.file);
+        console.log(this.url);
+      } else {
+        this.file = null;
+        this.url = null;
+      }
+    },
   },
   created: function () {},
   data() {
     return {
+      url: null,
+      file: null,
       dialog: false,
       headers: [
         {
