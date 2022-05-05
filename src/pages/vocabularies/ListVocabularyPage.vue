@@ -1,15 +1,15 @@
 <template>
   <div class="content_container">
-    <div>List Category</div>
+    <div>Vocabularies</div>
     <v-dialog v-model="dialogCreateUser" persistent max-width="600px">
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="primary" dark v-bind="attrs" v-on="on">
-          Add Category
+          Add Vocabulary
         </v-btn>
       </template>
       <v-card>
         <v-card-title>
-          <span class="text-h5">Category</span>
+          <span class="text-h5">Vocabulary</span>
         </v-card-title>
         <v-card-text>
           <v-container>
@@ -61,7 +61,7 @@
 <script>
 import ListCategory from "../../components/categories/ListCategory.vue";
 export default {
-  name: "ListCategoryPage",
+  name: "ListVocabularyPage",
   components: { ListCategory },
   data: () => ({
     categories: [],

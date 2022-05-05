@@ -15,7 +15,11 @@
     <v-divider></v-divider>
 
     <v-list dense>
-      <router-link v-for="item in items" :key="item.title" :to="{ name: item.name }">
+      <router-link
+        v-for="item in items"
+        :key="item.title"
+        :to="{ name: item.name }"
+      >
         <v-list-item link>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -38,9 +42,24 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: "Home", icon: "mdi-home-city" , name: 'home'},
-        { title: "Categories", icon: "mdi-account" , name: 'categories'},
-        { title: "Users", icon: "mdi-account-group-outline" , name: 'users'},
+        { title: "Home", icon: "mdi-home-city", name: "home" },
+        { title: "Categories", icon: "mdi-account", name: "categories" },
+        {
+          title: "Vocabularies",
+          icon: "mdi-account-group-outline",
+          name: "vocabularies",
+        },
+        {
+          title: "Questions",
+          icon: "mdi-account-group-outline",
+          name: "questions",
+        },
+        {
+          title: "Practices",
+          icon: "mdi-account-group-outline",
+          name: "practices",
+        },
+        { title: "Users", icon: "mdi-account-group-outline", name: "users" },
       ],
       mini: true,
     };
