@@ -45,7 +45,7 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" text @click="dialogCreateUser = false">
+          <v-btn color="blue darken-1" text @click="closeDialog">
             Close
           </v-btn>
           <v-btn color="blue darken-1" text @click="dialogCreateUser = false">
@@ -60,6 +60,7 @@
 
 <script>
 import ListCategory from "../../components/categories/ListCategory.vue";
+import { mapActions } from "vuex";
 export default {
   name: "ListCategoryPage",
   components: { ListCategory },
@@ -73,6 +74,7 @@ export default {
     file: null,
   }),
   methods: {
+    ...mapActions(["login"]),
     getCategories() {
       this.categories = [
         {
@@ -84,6 +86,10 @@ export default {
             "https://www.google.com.vn/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
         },
       ];
+    },
+    closeDialog(){
+      this.dialogCreateUser = false
+      console.log(this.$store)
     },
     onFileChange(image) {
       if (image) {
