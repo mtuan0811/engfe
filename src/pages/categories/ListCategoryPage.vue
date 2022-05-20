@@ -105,6 +105,8 @@ export default {
     },
     closeDialog(){
       this.dialogCreateUser = false
+      this.dialogCreateUser1 = true
+      this.dialogCreateUser2 = false
       console.log(this.$store)
     },
     onFileChange(image) {
