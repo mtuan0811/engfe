@@ -45,9 +45,7 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" text @click="closeDialog">
-            Close
-          </v-btn>
+          <v-btn color="blue darken-1" text @click="closeDialog"> Close </v-btn>
           <v-btn color="blue darken-1" text @click="dialogCreateUser = false">
             Save
           </v-btn>
@@ -103,9 +101,10 @@ export default {
         },
       ];
     },
-    closeDialog(){
-      this.dialogCreateUser = false
-      console.log(this.$store)
+    closeDialog() {
+      this.dialogCreateUser = false;
+      this.dialogCreateUser1 = false;
+      console.log(this.$store);
     },
     onFileChange(image) {
       if (image) {
