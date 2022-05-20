@@ -93,6 +93,14 @@ export default {
           images:
             "https://www.google.com.vn/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
         },
+        {
+          name: "Dong vat 3",
+          nameEng: "Animal 4",
+          description: "Dong Vat 5",
+          id: 2,
+          images:
+            "https://www.google.com.vn/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+        },
       ];
     },
     closeDialog(){
