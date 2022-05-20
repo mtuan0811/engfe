@@ -86,9 +86,9 @@ export default {
             "https://www.google.com.vn/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
         },
         {
-          name: "Dong vat 1",
-          nameEng: "Animal 1",
-          description: "Dong Vat 1",
+          name: "Dong vat 2",
+          nameEng: "Animal 2",
+          description: "Dong Vat 2",
           id: 2,
           images:
             "https://www.google.com.vn/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
